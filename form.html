@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVolution 2024 Registration</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-control {
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+        }
+
+        .toast-header {
+            background-color: #007bff;
+            color: #ffffff;
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .toast-body {
+            background-color: #f8f9fa;
+            color: #495057;
+            border-radius: 0 0 5px 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="mb-4 text-center">TechVolution 2024 Registration</h2>
+        <form id="registrationForm">
+            <!-- Personal Information -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" class="form-control" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="nonBinary" value="nonBinary">
+                    <label class="form-check-label" for="nonBinary">Non-binary</label>
+                </div>
+            </div>
+            <!-- Contact Details -->
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number"
+                    required>
+            </div>
+            <div class="form-group">
+                <label>Address:</label>
+                <input type="text" class="form-control" id="streetAddress" name="streetAddress"
+                    placeholder="Street Address" required>
+                <input type="text" class="form-control" id="city" name="city" placeholder="City" required>
+                <select class="form-control" id="state" name="state" required>
+                    <option value="" selected disabled>Select State</option>
+                    <option value="AP">Andhra Pradesh</option>
+                    <option value="AR">Arunachal Pradesh</option>
+                    <option value="AS">Assam</option>
+                    <option value="BR">Bihar</option>
+                    <option value="CG">Chhattisgarh</option>
+                    <option value="GA">Goa</option>
+                    <option value="GJ">Gujarat</option>
+                    <option value="HR">Haryana</option>
+                    <option value="HP">Himachal Pradesh</option>
+                    <option value="JK">Jammu and Kashmir</option>
+                    <option value="JH">Jharkhand</option>
+                    <option value="KA">Karnataka</option>
+                    <option value="KL">Kerala</option>
+                    <option value="MP">Madhya Pradesh</option>
+                    <option value="MH">Maharashtra</option>
+                    <option value="MN">Manipur</option>
+                    <option value="ML">Meghalaya</option>
+                    <option value="MZ">Mizoram</option>
+                    <option value="NL">Nagaland</option>
+                    <option value="OD">Odisha</option>
+                    <option value="PB">Punjab</option>
+                    <option value="RJ">Rajasthan</option>
+                    <option value="SK">Sikkim</option>
+                    <option value="TN">Tamil Nadu</option>
+                    <option value="TS">Telangana</option>
+                    <option value="TR">Tripura</option>
+                    <option value="UK">Uttarakhand</option>
+                    <option value="UP">Uttar Pradesh</option>
+                    <option value="WB">West Bengal</option>
+                </select>
+                <input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="Zip Code" required>
+            </div>
+            <!-- Additional Information -->
+            <div class="form-group">
+                <label for="collegeEvent">Engineering College Event:</label>
+                <select class="form-control" id="collegeEvent" name="collegeEvent" required>
+                    <option value="" selected disabled>Select College Event</option>
+                    <option value="Hackathon">Hackathon</option>
+                    <option value="Technical Symposium">Technical Symposium</option>
+                    <option value="Robotics Competition">Robotics Competition</option>
+                    <!-- Add more events as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dietaryRestrictions">Dietary Restrictions:</label>
+                <textarea class="form-control" id="dietaryRestrictions" name="dietaryRestrictions" rows="3"
+                    placeholder="Enter any dietary restrictions"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tshirtSize">T-shirt Size:</label>
+                <select class="form-control" id="tshirtSize" name="tshirtSize" required>
+                    <option value="" selected disabled>Select T-shirt Size</option>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                    <!-- Add more sizes as needed -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+        <!-- Toast Message -->
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="3000">
+            <div class="toast-header bg-primary text-white">
+                <strong class="mr-auto">Registration</strong>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Your information has been registered successfully!
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        $(document).ready(function () {
+            // Handle form submission
+            $('#registrationForm').submit(function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Form data
+                var formData = {
+                    name: $('#name').val(),
+                    dob: $('#dob').val(),
+                    gender: $("input[name='gender']:checked").val(),
+                    email: $('#email').val(),
+                    phone: $('#phone').val(),
+                    streetAddress: $('#streetAddress').val(),
+                    city: $('#city').val(),
+                    state: $('#state').val(),
+                    zipCode: $('#zipCode').val(),
+                    collegeEvent: $('#collegeEvent').val(),
+                    dietaryRestrictions: $('#dietaryRestrictions').val(),
+                    tshirtSize: $('#tshirtSize').val()
+                };
+
+                // Simulate form submission (replace this with actual submission to backend)
+                // For demonstration purposes, just showing submitted data in console
+                console.log(formData);
+
+                // Display toast message for successful registration
+                $('.toast').toast('show');
+
+                // Clear form fields after submission
+                $('#registrationForm')[0].reset();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
